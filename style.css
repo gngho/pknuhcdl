@@ -276,3 +276,18 @@ footer {
     
     .hero h1 { font-size: 2.5rem; }
 }
+
+/* --- Publications 링크 스타일 --- */
+
+/* 평소에는 검은색(또는 기존 글자색) 유지 및 밑줄 제거 */
+.paper-info strong a {
+    color: #333;           /* 기존 글자색과 맞춤 */
+    text-decoration: none; /* 밑줄 없애기 */
+    transition: color 0.3s; /* 색상 변경 부드럽게 */
+}
+
+/* 마우스를 올렸을 때 (Hover) 강조 */
+.paper-info strong a:hover {
+    color: #0f4c81;        /* 연구실 포인트 컬러 (파란색 계열) */
+    text-decoration: underline; /* 마우스 올리면 밑줄 생김 */
+}
