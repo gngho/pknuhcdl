@@ -71,7 +71,7 @@ header .container {
 
 /* 로고 이미지 스타일 */
 .logo-img {
-    height: 50px;  /* 헤더 높이가 70px이므로 40~50px 정도가 적당합니다 */
+    height: 60px;  /* 헤더 높이가 70px이므로 40~50px 정도가 적당합니다 */
     width: auto;   /* 높이에 맞춰 비율 자동 유지 */
     object-fit: contain; /* 이미지가 찌그러지지 않게 함 */
 }
