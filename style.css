@@ -291,3 +291,41 @@ footer {
     color: #0f4c81;        /* 연구실 포인트 컬러 (파란색 계열) */
     text-decoration: underline; /* 마우스 올리면 밑줄 생김 */
 }
+
+/* --- People 섹션 레이아웃 스타일 --- */
+
+/* 소제목 스타일 */
+.subsection-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* 교수님 영역 중앙 정렬 */
+.professor-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* 교수님 카드 크기 조절 */
+.professor-card {
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* 조금 더 강조된 그림자 */
+}
+
+/* 구분선 스타일 */
+.divider {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 50px auto;
+    width: 80%;
+}
+
+/* (선택사항) 졸업생 카드는 배경색을 살짝 다르게 하려면 */
+/* .alumni-card { background-color: #fff; } */
