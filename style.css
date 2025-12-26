@@ -318,104 +318,15 @@ header .container {
     .hero h1 { font-size: 2.5rem; }
 }
 
-/* === New Footer Style (이미지 참고 구조) === */
+/* === Footer Style (색상 수정됨) === */
 footer {
-    background-color: #2c2c2c; /* 묵직한 다크 그레이 배경 */
-    color: #ccc;               /* 연한 회색 텍스트 */
-    padding: 60px 0 30px;      /* 위아래 여백 넉넉하게 */
-    font-size: 0.9rem;
-    margin-top: 80px;          /* 본문과 거리두기 */
+    /* 기존의 연한 파란색(#6b9ac4)을 지우고 메인 컬러로 변경 */
+    background-color: #0f4c81;  /* 연구실 메인 테마 컬러 (Navy) */
+    
+    color: #ffffff;
+    padding: 60px 0 30px;
+    margin-top: 80px;
+    font-size: 0.95rem;
 }
 
-/* 상단 영역 (로고+주소 vs 링크) */
-.footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap; /* 모바일에서 줄바꿈 허용 */
-    gap: 40px;
-}
-
-/* 로고 스타일 */
-.footer-logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    display: inline-block;
-    margin-bottom: 20px;
-    text-decoration: none;
-}
-
-/* 주소 정보 (이탤릭체 해제) */
-.footer-info {
-    font-style: normal;
-    line-height: 1.8;
-}
-.footer-info p {
-    margin-bottom: 5px;
-}
-
-/* 오른쪽 링크들 */
-.footer-links {
-    display: flex;
-    gap: 20px;
-}
-.footer-links a {
-    color: #fff;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-.footer-links a:hover {
-    color: var(--accent-color);
-    text-decoration: underline;
-}
-
-/* 구분선 */
-.footer-divider {
-    border: 0;
-    height: 1px;
-    background-color: #444; /* 배경보다 조금 밝은 선 */
-    margin: 30px 0;
-}
-
-/* 하단 영역 (정책 vs 카피라이트) */
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    font-size: 0.85rem;
-}
-
-/* 정책 링크 */
-.policy-links {
-    display: flex;
-    gap: 20px;
-}
-.policy-links a {
-    color: #aaa;
-}
-.policy-links strong {
-    color: #fff; /* 중요 항목 강조 */
-}
-
-/* 카피라이트 */
-.copyright {
-    color: #777;
-}
-
-/* 반응형 (모바일) */
-@media (max-width: 768px) {
-    .footer-top, .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .footer-links, .policy-links {
-        flex-direction: column; /* 모바일에서는 세로로 나열 */
-        gap: 10px;
-    }
-    .footer-right {
-        margin-top: 20px;
-    }
-}
+/* ... 나머지 footer 관련 코드는 그대로 두시면 됩니다 ... */
