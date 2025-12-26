@@ -329,4 +329,9 @@ footer {
     font-size: 0.95rem;
 }
 
-/* ... 나머지 footer 관련 코드는 그대로 두시면 됩니다 ... */
+.footer-columns {
+    display: flex;
+    flex-direction: column; /* 핵심: 가로(row) -> 세로(column) 변경 */
+    gap: 30px;              /* 각 항목 사이의 위아래 간격 */
+    margin-bottom: 40px;
+}
