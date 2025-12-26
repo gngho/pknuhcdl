@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News 상세</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="news_data.js"></script>
+</head>
+<body>
+    <header>...</header> 
+
+    <section class="section-padding" style="margin-top: 80px;">
+        <div class="container">
+            <h1 id="news-title" style="font-size: 2.5rem; margin-bottom: 10px; color: #0f4c81;"></h1>
+            <p style="color: #666; margin-bottom: 30px;">
+                <span id="news-date"></span> | 작성자: <span id="news-writer"></span>
+            </p>
+            
+            <div class="news-body" style="line-height: 1.8; font-size: 1.1rem;">
+                <img id="news-image" src="" alt="뉴스 이미지" style="width: 100%; max-width: 800px; border-radius: 10px; margin-bottom: 30px;">
+                <div id="news-content"></div>
+            </div>
+
+            <div style="margin-top: 50px; text-align: center;">
+                <a href="index.html#news" class="btn">목록으로 돌아가기</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // 1. 주소창에서 번호(?id=1)를 가져옵니다.
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id'); // 예: 1, 2 ...
+
+        // 2. news_data.js에서 해당 번호의 데이터를 찾습니다.
+        const data = newsData[id];
+
+        // 3. 데이터가 있으면 화면에 채워 넣습니다.
+        if (data) {
+            document.getElementById('news-title').innerText = data.title;
+            document.getElementById('news-date').innerText = data.date;
+            document.getElementById('news-writer').innerText = data.writer;
+            document.getElementById('news-image').src = data.image;
+            document.getElementById('news-content').innerHTML = data.content;
+        } else {
+            document.querySelector('.container').innerHTML = "<h1>존재하지 않는 게시물입니다.</h1>";
+        }
+    </script>
+</body>
+</html>
