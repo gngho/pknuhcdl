@@ -197,6 +197,40 @@ header .container {
 .role { color: var(--accent-color); font-weight: bold; margin-bottom: 5px; }
 .email { font-size: 0.9rem; color: var(--text-light); }
 
+/* --- People 섹션 레이아웃 스타일 --- */
+
+/* 소제목 스타일 */
+.subsection-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 80px;
+    margin-bottom:50px;
+    font-weight: 700;
+}
+
+/* 첫 번째 소제목(교수님)은 위쪽 여백이 너무 크지 않게 조정 */
+.subsection-title:first-of-type {
+    margin-top: 20px;
+}
+
+/* 교수님 영역 중앙 정렬 */
+.professor-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* 교수님 카드 크기 조절 */
+.professor-card {
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* 조금 더 강조된 그림자 */
+}
+
+/* (선택사항) 졸업생 카드는 배경색을 살짝 다르게 하려면 */
+.alumni-card { background-color: #fff; }
+
 /* 연구 분야 (Research) */
 .research-item {
     background: var(--white);
@@ -221,6 +255,22 @@ header .container {
 }
 .paper-info strong { display: block; margin-bottom: 5px; }
 .paper-info p { font-size: 0.95rem; color: var(--text-light); }
+
+/* --- Publications 링크 스타일 --- */
+
+/* 평소에는 검은색(또는 기존 글자색) 유지 및 밑줄 제거 */
+.paper-info strong a {
+    color: #333;           /* 기존 글자색과 맞춤 */
+    text-decoration: none; /* 밑줄 없애기 */
+    transition: color 0.3s; /* 색상 변경 부드럽게 */
+}
+
+/* 마우스를 올렸을 때 (Hover) 강조 */
+.paper-info strong a:hover {
+    color: #0f4c81;        /* 연구실 포인트 컬러 (파란색 계열) */
+    text-decoration: underline; /* 마우스 올리면 밑줄 생김 */
+}
+
 
 /* 연락처 & 모집 공고 */
 .contact-info { text-align: center; font-size: 1.1rem; }
@@ -276,52 +326,3 @@ footer {
     
     .hero h1 { font-size: 2.5rem; }
 }
-
-/* --- Publications 링크 스타일 --- */
-
-/* 평소에는 검은색(또는 기존 글자색) 유지 및 밑줄 제거 */
-.paper-info strong a {
-    color: #333;           /* 기존 글자색과 맞춤 */
-    text-decoration: none; /* 밑줄 없애기 */
-    transition: color 0.3s; /* 색상 변경 부드럽게 */
-}
-
-/* 마우스를 올렸을 때 (Hover) 강조 */
-.paper-info strong a:hover {
-    color: #0f4c81;        /* 연구실 포인트 컬러 (파란색 계열) */
-    text-decoration: underline; /* 마우스 올리면 밑줄 생김 */
-}
-
-/* --- People 섹션 레이아웃 스타일 --- */
-
-/* 소제목 스타일 */
-.subsection-title {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #333;
-    margin-top: 80px;
-    margin-bottom:50px;
-    font-weight: 700;
-}
-
-/* 첫 번째 소제목(교수님)은 위쪽 여백이 너무 크지 않게 조정 */
-.subsection-title:first-of-type {
-    margin-top: 20px;
-}
-
-/* 교수님 영역 중앙 정렬 */
-.professor-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-
-/* 교수님 카드 크기 조절 */
-.professor-card {
-    max-width: 400px;
-    width: 100%;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* 조금 더 강조된 그림자 */
-}
-
-/* (선택사항) 졸업생 카드는 배경색을 살짝 다르게 하려면 */
-.alumni-card { background-color: #fff; }
