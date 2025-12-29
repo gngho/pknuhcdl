@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News - 상세 보기</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
     
-    <script src="news_data.js"></script> 
+    <script src="../news_data.js"></script> 
 </head>
 <body>
 
     <header>
         <div class="container">
             <div class="logo">
-                <a href="index.html">
-                    <img src="logo.png" alt="연구실 로고" class="logo-img">
+                <a href="../index.html">
+                    <img src="../logo.png" alt="연구실 로고" class="logo-img">
                 </a>
             </div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html#home">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#members">Members</a></li>
-                    <li><a href="index.html#research">Research</a></li>
-                    <li><a href="index.html#publications">Publications</a></li>
-                    <li><a href="index.html#news">News</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about/index.html">About</a></li>
+                    <li><a href="../members/index.html">Members</a></li>
+                    <li><a href="../research/index.html">Research</a></li>
+                    <li><a href="../publications/index.html">Publications</a></li>
+                    
+                    <li><a href="index.html" class="active" style="color: #5b9bd5;">News</a></li>
                 </ul>
                 <div class="burger">
                     <div class="line1"></div>
@@ -50,17 +51,42 @@
             </div>
 
             <div style="margin-top: 60px; text-align: center;">
-                <a href="index.html#news" class="btn">목록으로 돌아가기</a>
+                <a href="index.html" class="btn">목록으로 돌아가기</a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Human Centered Design Lab. All Rights Reserved.</p>
+    <footer id="contact">
+        <div class="container">
+            <h2 class="footer-lab-name">Human Centered Design Lab</h2>
+
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p><a href="mailto:dgpark@pknu.ac.kr">✉ dgpark@pknu.ac.kr</a></p>
+                </div>
+                <div class="footer-col">
+                    <h3>Address</h3>
+                    <p>부산광역시 남구 용소로 45,<br>창의관(D15) 1005호<br>(대연캠퍼스)</p>
+                    <a href="https://map.naver.com/p/search/부경대학교%20창의관" target="_blank" class="map-link">[Map]</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Related Links</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="https://www.pknu.ac.kr" target="_blank">Pukyong National University</a></li>
+                        <li><a href="https://college.pknu.ac.kr/eng" target="_blank">College of Engineering</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                &copy; 2025 Human Centered Design Lab. All Rights Reserved.
+            </div>
+        </div>
     </footer>
 
     <script>
-        // 1. 모바일 메뉴 작동 스크립트 (헤더용)
+        // 1. 모바일 메뉴 작동
         const burger = document.querySelector('.burger');
         const nav = document.querySelector('.nav-links');
         
@@ -71,26 +97,27 @@
             });
         }
 
-        // 2. 뉴스 데이터 불러오기 로직
+        // 2. 뉴스 데이터 불러오기 및 경로 처리
         const params = new URLSearchParams(window.location.search);
         const id = params.get('id');
-        const data = newsData[id];
-
-        if (data) {
+        
+        if (typeof newsData !== 'undefined' && newsData[id]) {
+            const data = newsData[id];
+            
             document.getElementById('view-title').innerText = data.title;
             document.getElementById('view-date').innerText = data.date;
             document.getElementById('view-content').innerHTML = data.content;
             
-            // 이미지가 있는 경우에만 보여주기
+            // [중요] 이미지 경로 처리
             const imgElement = document.getElementById('view-image');
             if(data.image && data.image.trim() !== "") {
-                imgElement.src = data.image;
+                // newsData.js에는 "news/사진.jpg"라고 되어 있을 텐데,
+                // 현재 파일이 이미 'news/' 폴더 안에 있으므로
+                // "../"를 붙여서 [상위폴더 -> news폴더 -> 사진] 순서로 찾게 만듭니다.
+                imgElement.src = "../" + data.image; 
                 imgElement.style.display = "block";
             }
         } else {
-            document.querySelector('.container').innerHTML = "<h2 style='text-align:center; margin-top:50px;'>존재하지 않는 게시물입니다.</h2><div style='text-align:center; margin-top:20px;'><a href='index.html' class='btn'>홈으로</a></div>";
-        }
-    </script>
-
-</body>
-</html>
+            document.querySelector('.container').innerHTML = 
+                "<h2 style='text-align:center; margin-top:50px;'>데이터를 불러올 수 없습니다.</h2>" +
+                "<div style='text-align:center; margin-top:20px;'><a href='index.html' class='btn'>목록으로</a></div>";
