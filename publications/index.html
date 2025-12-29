@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Publications | HCDL</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html"><img src="../logo.png" alt="로고" class="logo-img"></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about/index.html">About</a></li>
+                    <li><a href="../members/index.html">Members</a></li>
+                    <li><a href="../research/index.html">Research</a></li>
+                    <li><a href="index.html" class="active" style="color: #5b9bd5;">Publications</a></li>
+                    <li><a href="../news/index.html">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="burger"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section-padding bg-light" style="margin-top: 70px;">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <ul class="paper-list">
+                <li>
+                    <span class="year">2025</span>
+                    <div class="paper-info">
+                        <strong><a href="https://doi.org/10.1016/j.heliyon.2025.e42312" target="_blank">Understanding risk perceptions of e-scooter use...</a></strong>
+                        <p>Son, Y., Kim, M., Lee, Y., & Park, D. | <em>Heliyon</em></p>
+                    </div>
+                </li>
+                </ul>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+             <div class="footer-copyright">&copy; 2025 Human Centered Design Lab. All Rights Reserved.</div>
+        </div>
+    </footer>
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        if(burger){ burger.addEventListener('click', () => { nav.classList.toggle('nav-active'); burger.classList.toggle('toggle'); }); }
+    </script>
+</body>
+</html>

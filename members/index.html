@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members | HCDL</title>
+    
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../logo.png" alt="연구실 로고" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    
+                    <li><a href="#" class="active" style="color: #5b9bd5;">Members</a></li>
+                    
+                    <li><a href="../index.html#research">Research</a></li>
+                    <li><a href="../index.html#publications">Publications</a></li>
+                    <li><a href="../index.html#news">News</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li> </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="members" class="section-padding bg-light" style="margin-top: 70px; min-height: 80vh;">
+        <div class="container">
+            <h2 class="section-title">People</h2>
+
+            <h3 class="subsection-title">Principal Investigator</h3>
+            <div class="professor-wrapper">
+                <div class="card professor-card">
+                    <div class="profile-img" style="background-image: url('https://via.placeholder.com/150');"></div>
+                    <div class="card-content">
+                        <h3>박동건 교수</h3>
+                        <p class="role">Principal Investigator</p>
+                        <p class="email">dgpark@pknu.ac.kr</p>
+                        <p class="desc" style="font-size: 0.9rem; color: #666; margin-top: 10px;">Human Centered Design Lab 지도교수</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Current Students</h3>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="profile-img" style="background-image: url('https://via.placeholder.com/150');"></div>
+                    <h3>강경호</h3>
+                    <p class="role">Master's Program</p>
+                    <p class="email">kk479@pukyong.ac.kr</p>
+                </div>
+                <div class="card">
+                    <div class="profile-img" style="background-image: url('https://via.placeholder.com/150');"></div>
+                    <h3>변윤주</h3>
+                    <p class="role">Bachelor's Program</p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Alumni</h3>
+            <div class="grid-3">
+                <div class="card alumni-card">
+                    <div class="profile-img" style="background-image: url('https://via.placeholder.com/150');"></div>
+                    <h3>김민주</h3>
+                    <p class="role">Master's Degree</p>
+                    <p class="email">aksen2276@naver.com</p>
+                </div>
+                <div class="card alumni-card">
+                    <div class="profile-img" style="background-image: url('https://via.placeholder.com/150');"></div>
+                    <h3>손유경</h3>
+                    <p class="role">Master's Degree</p>
+                    <p class="email">ssu4001@naver.com</p>
+                </div>
+                <div class="card alumni-card">
+                    <div class="profile-img" style="background-image: url('https://via.placeholder.com/150');"></div>
+                    <h3>김동건</h3>
+                    <p class="role">Bachelor's Degree</p>
+                    <p class="email">rlaehdrjs@pukyong.ac.kr</p>
+                </div>
+                <div class="card alumni-card">
+                    <div class="profile-img" style="background-image: url('https://via.placeholder.com/150');"></div>
+                    <h3>정은서</h3>
+                    <p class="role">Bachelor's Degree</p>
+                    <p class="email">wjddmstj320@naver.com</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2 class="footer-lab-name">Human Centered Design Lab</h2>
+
+            <div class="footer-columns">
+                
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p>
+                        <a href="mailto:kk479@pukyong.ac.kr">✉ kk479@pukyong.ac.kr</a>
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Address</h3>
+                    <p>
+                        부산광역시 남구 용소로 45,<br>
+                        창의관(D15) 1005호<br>
+                        (대연캠퍼스)
+                    </p>
+                    <a href="https://map.naver.com/p/search/부경대학교%20창의관" target="_blank" class="map-link">[Map]</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Related Links</h3>
+                    <ul class="footer-links-list">
+                        <li>
+                            <a href="https://www.pknu.ac.kr" target="_blank">Pukyong National University</a>
+                        </li>
+                        <li>
+                            <a href="https://college.pknu.ac.kr/eng" target="_blank">College of Engineering</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                &copy; 2025 Human Centered Design Lab. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 모바일 메뉴 스크립트
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        
+        if (burger) {
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                burger.classList.toggle('toggle');
+            });
+        }
+        
+        // (슬라이더 스크립트는 이 페이지에 필요 없으므로 제거했습니다)
+    </script>
+</body>
+</html>

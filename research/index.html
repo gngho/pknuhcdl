@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Research | HCDL</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html"><img src="../logo.png" alt="로고" class="logo-img"></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about/index.html">About</a></li>
+                    <li><a href="../members/index.html">Members</a></li>
+                    <li><a href="index.html" class="active" style="color: #5b9bd5;">Research</a></li>
+                    <li><a href="../publications/index.html">Publications</a></li>
+                    <li><a href="../news/index.html">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="burger"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section-padding" style="margin-top: 70px;">
+        <div class="container">
+            <h2 class="section-title">Research Areas</h2>
+            <div class="grid-2">
+                <div class="research-item">
+                    <h3>🦾 Physical Ergonomics</h3>
+                    <p>작업 부하 평가, 근골격계 질환 예방, 웨어러블 로봇 평가 등 신체적 인간공학 연구를 수행합니다.</p>
+                </div>
+                <div class="research-item">
+                    <h3>🧠 Cognitive UX/HCI</h3>
+                    <p>사용자의 인지 부하 측정, 시선 추적(Eye-tracking), VR/AR 환경에서의 사용자 경험을 분석합니다.</p>
+                </div>
+                <div class="research-item">
+                    <h3>🚗 Automotive HMI</h3>
+                    <p>자율주행차 내에서의 사용자 경험(UX) 및 운전자 모니터링 시스템(DMS)을 연구합니다.</p>
+                </div>
+                <div class="research-item">
+                    <h3>🤖 Human-AI Interaction</h3>
+                    <p>설명 가능한 AI(XAI) 및 인간과 AI의 협업 모델을 설계하고 평가합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+             <div class="footer-copyright">&copy; 2025 Human Centered Design Lab. All Rights Reserved.</div>
+        </div>
+    </footer>
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        if(burger){ burger.addEventListener('click', () => { nav.classList.toggle('nav-active'); burger.classList.toggle('toggle'); }); }
+    </script>
+</body>
+</html>
