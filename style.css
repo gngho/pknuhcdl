@@ -331,7 +331,10 @@ footer {
 
 .footer-columns {
     display: flex;
-    flex-direction: column; /* 핵심: 가로(row) -> 세로(column) 변경 */
-    gap: 30px;              /* 각 항목 사이의 위아래 간격 */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
     margin-bottom: 40px;
 }
